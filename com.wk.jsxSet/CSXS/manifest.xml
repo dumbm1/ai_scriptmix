@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest
+        Version="4.0"
+        ExtensionBundleId="com.wk.jsxSet"
+        ExtensionBundleVersion="1.1"
+        ExtensionBundleName="com.wk.jsxSet"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Author>
+        <![CDATA[Marat Shagiev]]>
+    </Author>
+    <Contact mailto="m_js@bk.ru">
+        <![CDATA[m_js@bk.ru]]>
+    </Contact>
+    <Legal>
+        <![CDATA[Legal stuff...]]>
+    </Legal>
+    <Abstract href="#">
+        <![CDATA[
+        Place your favorite jsx-scripts as a custom png-buttons^
+        1. You must have the raster button on png format and the script in jsx format
+        2. Add you script and image button through "Add script" button (plus icon button)
+        ]]>
+    </Abstract>
+    <ExtensionList>
+        <Extension Id="com.wk.jsxSet" Version="1.1"/>
+    </ExtensionList>
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="ILST" Version="17.0"/>
+        </HostList>
+        <LocaleList>
+            <Locale Code="All"/>
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="4.0"/>
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="com.wk.jsxSet">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./index.html</MainPath>
+                    <ScriptPath>./jsx/hostscript.jsx</ScriptPath>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>jsxSet v1.1beta</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>120</Height>
+                            <Width>200</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>120</Height>
+                            <Width>190</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>120</Height>
+                            <Width>240</Width>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./icons/iconNormal.png</Icon>
+                        <Icon Type="RollOver">./icons/iconRollover.png</Icon>
+                        <Icon Type="Disabled">./icons/iconDisabled.png</Icon>
+                        <Icon Type="DarkNormal">./icons/iconDarkNormal.png</Icon>
+                        <Icon Type="DarkRollOver">./icons/iconDarkRollover.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>

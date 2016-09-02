@@ -1,0 +1,32 @@
+body {
+  margin: 10px
+}
+
+#content {
+  margin-right:   auto;
+  margin-left:    auto;
+  vertical-align: middle;
+  width:          100%;
+}
+
+.btn {
+  width:  25px;
+  height: 25px;
+  margin: 1px;
+}
+
+#btns_serv {
+  position:   absolute;
+  right:      10px;
+  left:       10px;
+  bottom:     2px;
+  float:      left;
+  border-top: 1px solid;
+}
+
+.btn_serv {
+  width:  15px;
+  height: 15px;
+  float:  right;
+  margin: 3px 4px 2px 4px;
+}
