@@ -15,9 +15,7 @@
         <![CDATA[Legal stuff...]]>
     </Legal>
     <Abstract href="#">
-        <![CDATA[
-        Place your favorite jsx-scripts as a custom png-buttons
-        ]]>
+        <![CDATA[Place your favorite jsx-scripts as a custom png-buttons]]>
     </Abstract>
     <ExtensionList>
         <Extension Id="com.wk.scriptmix_wk" Version="1.1"/>
@@ -48,7 +46,7 @@
                 </Lifecycle>
                 <UI>
                     <Type>Panel</Type>
-                    <Menu>scriptmix 1.1</Menu>
+                    <Menu>scriptmix_wk 1.1</Menu>
                     <Geometry>
                         <Size>
                             <Height>120</Height>
