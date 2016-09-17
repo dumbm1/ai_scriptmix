@@ -7,7 +7,8 @@
             
             <!-- Photoshop -->
             <Host Name="PHXS" Port="8088"/>
-            
+            <Host Name="PHSP" Port="8088"/>
+
             <!-- Illustrator -->
             <Host Name="ILST" Port="8089"/>
 
