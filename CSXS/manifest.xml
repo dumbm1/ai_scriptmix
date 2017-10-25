@@ -49,15 +49,15 @@
                     <Menu>scriptmix_wk 1.1</Menu>
                     <Geometry>
                         <Size>
-                            <Height>120</Height>
+                            <Height>150</Height>
                             <Width>200</Width>
                         </Size>
                         <MinSize>
-                            <Height>120</Height>
+                            <Height>150</Height>
                             <Width>190</Width>
                         </MinSize>
                         <MaxSize>
-                            <Height>120</Height>
+                            <Height>150</Height>
                             <Width>240</Width>
                         </MaxSize>
                     </Geometry>
