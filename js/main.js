@@ -7,18 +7,18 @@
 
 (function () {
   'use strict';
+  var csInterface = new CSInterface();
 
-  var csInterface = new CSInterface ();
-  init ();
+  init();
 
-  function init () {
+  function init() {
 
-    themeManager.init ();
+    themeManager.init();
 
-    loadJSX ("json2.js");
+    loadJSX('json2.js');
 
-    var userData  = csInterface.getSystemPath (SystemPath.USER_DATA),
-        store     = userData + '/LocalStore/jsxSet/',
+    var userData  = csInterface.getSystemPath(SystemPath.USER_DATA),
+        store     = userData + '/LocalStore/ai_scriptmix/',
         storeCfg  = store + 'cfg/',
         storeImg  = store + 'img/',
         storeJsx  = store + 'jsx/',
@@ -29,48 +29,53 @@
         i;
 
     // load the buttons names from file
-    csInterface.evalScript ('readlnBtnsList()', function (result) {
+    csInterface.evalScript('readlnBtnsList()', function (result) {
       if (result.length == 0) return;
       btnsNames = JSON.parse(result);
 
       for (i = 0; i < btnsNames.length; i++) {
-        addBtnToInterface (btnsNames[i]);
+        addBtnToInterface(btnsNames[i]);
       }
     });
 
     /**
      * SERVICE BUTTONS HANDLERS
      * */
-    $ ("#btn_addBtn").click (function () {
-      csInterface.evalScript ('addBtnToStore("' + store + '" )',
+
+    $('#btn_addBtn').click(function () {
+      csInterface.evalScript('addBtnToStore("' + store + '" )',
         function (result) {
           if (result.length != 0) {
-            addBtnToInterface (result);
+            addBtnToInterface(result);
           }
         });
     });
-    $ ("#btn_prefs").click (function () {
-      csInterface.evalScript ('changePrefs("' + storeCfg + '" )',
+
+    $('#btn_prefs').click(function () {
+      csInterface.evalScript('changePrefs("' + storeCfg + '" )',
         function (result) {
           if (result.length == 0) return;
-          reloadPanel ();
+          reloadPanel();
         });
     });
-    $ ("#btn_killCEP").click (function () {
-      csInterface.evalScript ('killCEP()');
+
+    $('#btn_reload').click(function () {
+      reloadPanel();
     });
-    $ ("#btn_reload").click (function () {
-      reloadPanel ();
-    });
-    $ ("#btn_source").click (function () {
-      csInterface.evalScript ('openFolder("' + store + '")');
+    /*$("#btn_killCEP").click(function () {
+     /!*new CSInterface().requestOpenExtension('com.wk.ai_scriptmix.dialog');
+     new CSInterface().closeExtension();*!/
+     });*/
+
+    $('#btn_source').click(function () {
+      csInterface.evalScript('openFolder("' + store + '")');
     });
 
     /** * * * * * * * * * * * *
      * * * jsxSet library * * *
      * * * * * * * * * * * * **/
 
-    function addBtnToInterface (btnName) {
+    function addBtnToInterface(btnName) {
       if (btnName.length == 0) return;
       var btn = document.createElement('input');
       btn.setAttribute('type', 'image');
@@ -81,20 +86,20 @@
       btn.setAttribute('id', 'btn_' + btnName);
 
       btn.addEventListener('click', function () {
-        csInterface.evalScript ('$.evalFile("' + storeJsx + btnName + '.jsx' + '")');
-      })
+        csInterface.evalScript('$.evalFile("' + storeJsx + btnName + '.jsx' + '")');
+      });
 
       btn.oncontextmenu = function () {
         var delName    = this.name,
             btnToDel   = document.getElementById('btn_' + btnName),
-            confirmDel = confirm ('Delete script: ' + delName + '?');
+            confirmDel = confirm('Delete script: ' + delName + '?');
         if (confirmDel) {
-          csInterface.evalScript ('delBtnFromStore("' + delName + '" )', function (result) {
+          csInterface.evalScript('delBtnFromStore("' + delName + '" )', function (result) {
             btnToDel.remove();
           });
         }
         return false;
-      }
+      };
 
       divBtns.appendChild(btn);
     }
@@ -105,13 +110,13 @@
    * * * NATIVE LIB * * *
    * * * * * * * * * * **/
   // Reloads extension panel
-  function reloadPanel () {
-    location.reload ();
+  function reloadPanel() {
+    location.reload();
   }
 
-  function loadJSX (fileName) {
-    var extensionRoot = csInterface.getSystemPath (SystemPath.EXTENSION) + "/jsx/";
-    csInterface.evalScript ('$.evalFile("' + extensionRoot + fileName + '")');
+  function loadJSX(fileName) {
+    var extensionRoot = csInterface.getSystemPath(SystemPath.EXTENSION) + '/jsx/';
+    csInterface.evalScript('$.evalFile("' + extensionRoot + fileName + '")');
   }
-} ());
+}());
     

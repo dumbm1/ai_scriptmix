@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExtensionManifest
         Version="4.0"
-        ExtensionBundleId="com.wk.scriptmix_wk"
-        ExtensionBundleVersion="1.1"
-        ExtensionBundleName="com.wk.scriptmix_wk"
+        ExtensionBundleId="com.wk.ai_scriptmix"
+        ExtensionBundleVersion="1.3.1"
+        ExtensionBundleName="ai_scriptmix"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Author>
         <![CDATA[Marat Shagiev]]>
@@ -18,14 +18,11 @@
         <![CDATA[Place your favorite jsx-scripts as a custom png-buttons]]>
     </Abstract>
     <ExtensionList>
-        <Extension Id="com.wk.scriptmix_wk" Version="1.1"/>
+        <Extension Id="com.wk.ai_scriptmix" Version="1.3.1"/>
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
             <Host Name="ILST" Version="17.0"/>
-            <Host Name="IDSN" Version="10.0"/>
-            <Host Name="PHXS" Version="15.0"/>
-            <Host Name="PHSP" Version="15.0"/>
         </HostList>
         <LocaleList>
             <Locale Code="All"/>
@@ -35,7 +32,7 @@
         </RequiredRuntimeList>
     </ExecutionEnvironment>
     <DispatchInfoList>
-        <Extension Id="com.wk.scriptmix_wk">
+        <Extension Id="com.wk.ai_scriptmix">
             <DispatchInfo>
                 <Resources>
                     <MainPath>./index.html</MainPath>
@@ -46,7 +43,7 @@
                 </Lifecycle>
                 <UI>
                     <Type>Panel</Type>
-                    <Menu>scriptmix_wk 1.1</Menu>
+                    <Menu>ai scriptmix 1.3.1</Menu>
                     <Geometry>
                         <Size>
                             <Height>150</Height>

@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <ExtensionList>
-    <Extension Id="com.jsxSet_v1.1">
+    <Extension Id="com.wk.ai_scriptmix">
         <HostList>
-           
+
             <!-- Comment Host tags according to the apps you want your panel to support -->
-            
-            <!-- Photoshop -->
-            <Host Name="PHXS" Port="8088"/>
-            <Host Name="PHSP" Port="8088"/>
 
             <!-- Illustrator -->
-            <Host Name="ILST" Port="8089"/>
-
-            <!-- InDesign -->
-            <Host Name="IDSN" Port="8090" />
+            <Host Name="ILST" Port="8088"/>
 
         </HostList>
     </Extension>
