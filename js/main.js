@@ -22,7 +22,7 @@
         storeCfg  = store + 'cfg/',
         storeImg  = store + 'img/',
         storeJsx  = store + 'jsx/',
-        btnsList  = storeCfg + 'btns_List.txt',
+        // btnsList  = storeCfg + 'btns_List.txt',
         btnsNames = [],
 
         divBtns   = document.getElementById('btns'),
@@ -62,10 +62,10 @@
     $('#btn_reload').click(function () {
       reloadPanel();
     });
-    /*$("#btn_killCEP").click(function () {
-     /!*new CSInterface().requestOpenExtension('com.wk.ai_scriptmix.dialog');
-     new CSInterface().closeExtension();*!/
-     });*/
+    $('#btn_killCEP').click(function () {
+      new CSInterface().requestOpenExtension('com.wk.ai_scriptmix.dialog');
+      new CSInterface().closeExtension();
+    });
 
     $('#btn_source').click(function () {
       csInterface.evalScript('openFolder("' + store + '")');

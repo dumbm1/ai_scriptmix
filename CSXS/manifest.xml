@@ -2,7 +2,7 @@
 <ExtensionManifest
         Version="4.0"
         ExtensionBundleId="com.wk.ai_scriptmix"
-        ExtensionBundleVersion="1.3.1"
+        ExtensionBundleVersion="1.4.0"
         ExtensionBundleName="ai_scriptmix"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Author>
@@ -18,7 +18,8 @@
         <![CDATA[Place your favorite jsx-scripts as a custom png-buttons]]>
     </Abstract>
     <ExtensionList>
-        <Extension Id="com.wk.ai_scriptmix" Version="1.3.1"/>
+        <Extension Id="com.wk.ai_scriptmix.panel" Version="1.4.0"/>
+        <Extension Id="com.wk.ai_scriptmix.dialog" Version="1.4.0"/>
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
@@ -32,7 +33,7 @@
         </RequiredRuntimeList>
     </ExecutionEnvironment>
     <DispatchInfoList>
-        <Extension Id="com.wk.ai_scriptmix">
+        <Extension Id="com.wk.ai_scriptmix.panel">
             <DispatchInfo>
                 <Resources>
                     <MainPath>./index.html</MainPath>
@@ -43,7 +44,7 @@
                 </Lifecycle>
                 <UI>
                     <Type>Panel</Type>
-                    <Menu>ai scriptmix 1.3.1</Menu>
+                    <Menu>ai scriptmix 1.4.0</Menu>
                     <Geometry>
                         <Size>
                             <Height>150</Height>
@@ -65,6 +66,36 @@
                         <Icon Type="DarkNormal">./icons/iconDarkNormal.png</Icon>
                         <Icon Type="DarkRollOver">./icons/iconDarkRollover.png</Icon>
                     </Icons>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+        <Extension Id="com.wk.ai_scriptmix.dialog">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./dialog.html</MainPath>
+                    <CEFCommandLine>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>false</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>ModalDialog</Type>
+                    <Menu>ai_scriptmix_dialog</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>1</Height>
+                            <Width>1</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>1</Height>
+                            <Width>1</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>1</Height>
+                            <Width>1</Width>
+                        </MaxSize>
+                    </Geometry>
                 </UI>
             </DispatchInfo>
         </Extension>
