@@ -17,6 +17,14 @@
 
     loadJSX('json2.js');
 
+    /* set the size of the window */
+    $(document).ready(function () {
+
+      setTimeout(function () {
+        fitWindowToContent();
+      }, 100);
+    });
+
     var userData  = csInterface.getSystemPath(SystemPath.USER_DATA),
         store     = userData + '/LocalStore/ai_scriptmix/',
         storeCfg  = store + 'cfg/',
@@ -117,6 +125,16 @@
   function loadJSX(fileName) {
     var extensionRoot = csInterface.getSystemPath(SystemPath.EXTENSION) + '/jsx/';
     csInterface.evalScript('$.evalFile("' + extensionRoot + fileName + '")');
+  }
+
+  function fitWindowToContent() {
+    if (typeof csInterface.resizeContent != 'undefined') {
+      var bodyVertMargin = parseInt($('body').css('marginTop')) + parseInt($('body').css('marginBottom'));
+      var bodyHorzMargin = parseInt($('body').css('marginLeft')) + parseInt($('body').css('marginRight'));
+      // console.log("Width: " + $("#extension-panel").width() + ", Height: " + Math.floor($("#extension-panel").innerHeight()));
+      csInterface.resizeContent($('#content').width() +
+                                bodyHorzMargin, Math.floor($('#content').innerHeight()) + bodyVertMargin);
+    }
   }
 }());
     

@@ -1,32 +1,37 @@
 body {
-  margin: 10px
-}
+ margin : 10px
+ }
 
 #content {
-  margin-right:   auto;
-  margin-left:    auto;
-  vertical-align: middle;
-  width:          100%;
-}
+ margin-right   : auto;
+ margin-left    : auto;
+ vertical-align : middle;
+ width          : 100%;
+ }
 
 .btn {
-  width:  30px;
-  height: 30px;
-  margin: 1px;
-}
+ width  : 30px;
+ height : 30px;
+ margin : 1px;
+ }
+
+#btns {
+ margin-bottom : 3px;
+ }
 
 #btns_serv {
-  position:   absolute;
-  right:      10px;
-  left:       10px;
-  bottom:     2px;
-  float:      left;
-  border-top: 1px solid;
-}
+ /*position   : absolute;*/
+ right      : 10px;
+ left       : 10px;
+ bottom     : 2px;
+ /*float      : left;*/
+ border-top : 1px solid;
+ height     : 20px;
+ }
 
 .btn_serv {
-  width:  15px;
-  height: 15px;
-  float:  right;
-  margin: 3px 4px 2px 4px;
-}
+ width  : 15px;
+ height : 15px;
+ float  : right;
+ margin : 3px 4px 2px 4px;
+ }
