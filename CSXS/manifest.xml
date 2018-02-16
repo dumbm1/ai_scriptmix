@@ -2,7 +2,7 @@
 <ExtensionManifest
         Version="4.0"
         ExtensionBundleId="com.wk.ai_scriptmix"
-        ExtensionBundleVersion="1.4.0"
+        ExtensionBundleVersion="1.4.1"
         ExtensionBundleName="ai_scriptmix"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Author>
@@ -17,9 +17,12 @@
     <Abstract href="#">
         <![CDATA[Place your favorite jsx-scripts as a custom png-buttons]]>
     </Abstract>
+    <Changes href="#">
+        <![CDATA[change the icons size from 25px to 35px]]>
+    </Changes>
     <ExtensionList>
-        <Extension Id="com.wk.ai_scriptmix.panel" Version="1.4.0"/>
-        <Extension Id="com.wk.ai_scriptmix.dialog" Version="1.4.0"/>
+        <Extension Id="com.wk.ai_scriptmix.panel" Version="1.4.1"/>
+        <Extension Id="com.wk.ai_scriptmix.dialog" Version="1.4.1"/>
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
@@ -44,19 +47,19 @@
                 </Lifecycle>
                 <UI>
                     <Type>Panel</Type>
-                    <Menu>ai scriptmix 1.4.0</Menu>
+                    <Menu>ai scriptmix 1.4.1</Menu>
                     <Geometry>
                         <Size>
-                            <Height>150</Height>
-                            <Width>200</Width>
+                            <Height>210</Height>
+                            <Width>210</Width>
                         </Size>
                         <MinSize>
-                            <Height>150</Height>
-                            <Width>190</Width>
+                            <Height>210</Height>
+                            <Width>210</Width>
                         </MinSize>
                         <MaxSize>
-                            <Height>150</Height>
-                            <Width>240</Width>
+                            <Height>210</Height>
+                            <Width>210</Width>
                         </MaxSize>
                     </Geometry>
                     <Icons>
