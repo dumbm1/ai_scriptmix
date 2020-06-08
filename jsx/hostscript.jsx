@@ -160,30 +160,30 @@ function openFolder(path) {
  * OTHER
  * */
 
-/*function killCEP () {
- /!**
- * make bat-file that kill all system processes CEPHTMLEngine.exe
- *!/
- _execFile (
- Folder.temp.absoluteURI + '/' + 'tasks_kill.bat',
- 'taskkill /IM CEPHTMLEngine.exe /f'
- );
- /!**
- * make new file by full path, write to disk with some file contenr, execute file
- *
- * @param {String} filePath - FULL path (include file-extension)
- * @param {String} fileContent - content to new file
- *!/
- function _execFile (filePath, fileContent) {
- var f = new File (filePath);
- f.open ('e');
- f.write (fileContent);
- f.close ();
- f.execute ();
- }
- }*/
+function killCEP() {
+  /**
+   * make bat-file that kill all system processes CEPHTMLEngine.exe
+   */
+  _execFile(
+    Folder.temp.absoluteURI + '/' + 'tasks_kill.bat',
+    'taskkill /IM CEPHTMLEngine.exe /f'
+  );
+  /**
+   * make new file by full path, write to disk with some file contenr, execute file
+   *
+   * @param {String} filePath - FULL path (include file-extension)
+   * @param {String} fileContent - content to new file
+   */
+  function _execFile(filePath, fileContent) {
+    var f = new File(filePath);
+    f.open('e');
+    f.write(fileContent);
+    f.close();
+    f.execute();
+  }
+}
 
-function changePrefs() {
+function changePrefs() { // !!! this function used in main.js
 
   var btnsNames = [],
       f         = new File(btnsList);
@@ -199,8 +199,8 @@ function changePrefs() {
       up         = grUpDown.add('button', undefined, 'Up'),
       down       = grUpDown.add('button', undefined, 'Down'),
       grOkCancel = w.add('group'),
-      ok         = grOkCancel.add('button', undefined, 'OK'),
-      cancel     = grOkCancel.add('button', undefined, 'Cancel');
+      ok         = grOkCancel.add('button', undefined, 'OK')/*,
+       cancel     = grOkCancel.add('button', undefined, 'Cancel')*/;
 
   ok.onClick = function () {
     var arr = [];
@@ -256,4 +256,85 @@ function changePrefs() {
   }
 
   w.show();
+}
+
+//=== SAVE ===
+function writeIni(jsonStr) {
+
+  var iniFile = _addIni();
+  var f = _writeIni(JSON.stringify(jsonStr));
+
+  return f.fullName;
+
+  function _addIni() {
+
+    var iniName              = 'ai_scriptmix',
+        localStoreFolderPath = Folder.userData + '/LocalStore/',
+        iniFolder,
+        iniFile;
+
+    iniFolder = new Folder(localStoreFolderPath + iniName);
+    iniFolder.exists == false ? iniFolder.create() : '';
+    iniFile = new File(iniFolder + '/' + iniName + '.ini');
+
+    return iniFile;
+  }
+
+  function _writeIni(str) {
+    if (iniFile.exists) {
+      var iniFullName = iniFile.fullName;
+      iniFile.remove();
+      iniFile = new File(iniFullName);
+    }
+
+    iniFile.open('e');
+    iniFile.writeln(str);
+    iniFile.close();
+
+    return iniFile;
+  }
+}
+
+function readIni() {
+  var str     = 'Ups...',
+      iniFile = _addIni();
+
+  iniFile.open('r');
+  str = iniFile.read();
+  iniFile.close();
+
+  return str;
+
+  function _addIni() {
+
+    var iniName              = 'ai_scriptmix',
+        localStoreFolderPath = Folder.userData + '/LocalStore/',
+        iniFolder,
+        iniFile;
+
+    iniFolder = new Folder(localStoreFolderPath + iniName);
+    iniFolder.exists == false ? iniFolder.create() : '';
+    iniFile = new File(iniFolder + '/' + iniName + '.ini');
+
+    return iniFile;
+  }
+}
+
+function delIni() {
+  var iniName              = 'ai_scriptmix',
+      localStoreFolderPath = Folder.userData + '/LocalStore/',
+      iniFolder            = new Folder(localStoreFolderPath + iniName),
+      iniFile;
+
+  if (!iniFolder.exists) {
+    return;
+  }
+  iniFile = new File(iniFolder + '/' + iniName + '.ini');
+  if (!iniFile.exists) {
+    return;
+  }
+  iniFile.remove();
+  // iniFolder.remove();
+
+  return true;
 }
