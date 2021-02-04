@@ -17,6 +17,7 @@
 
   function init() {
 
+
     themeManager.init();
 
     loadJSX('json2.js');
@@ -36,23 +37,34 @@
     // load the buttons names from file
     loadButtons();
 
+    jQuery.fn.extend({
+                       disableSelection: function () {
+                         this.each(function () {
+                           this.onselectstart = function () {
+                             return false;
+                           };
+                         });
+                       }
+                     });
+    $("body").disableSelection();
+
     /**
      * SERVICE BUTTONS HANDLERS
      * */
     $('#btn_addBtn').click(function () {
       csInterface.evalScript('addBtnToStore("' + store + '" )',
-        function (result) {
-          if (result.length != 0) {
-            addBtnToInterface(result);
-          }
-        });
+                             function (result) {
+                               if (result.length != 0) {
+                                 addBtnToInterface(result);
+                               }
+                             });
     });
     $('#btn_prefs').click(function () {
       csInterface.evalScript('changePrefs("' + storeCfg + '" )',
-        function (result) {
-          if (result.length == 0) return;
-          reloadPanel();
-        });
+                             function (result) {
+                               if (result.length == 0) return;
+                               reloadPanel();
+                             });
     });
     $('#btn_killCEP').click(function () {
       csInterface.evalScript('killCEP()');
