@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExtensionManifest
         Version="4.0"
-        ExtensionBundleId="com.wk.ai_scriptmix"
-        ExtensionBundleVersion="1.4.2"
+        ExtensionBundleId="ai_scriptmix"
+        ExtensionBundleVersion="0"
         ExtensionBundleName="ai_scriptmix"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Author>
@@ -21,8 +21,7 @@
         <![CDATA[change the icons size from 25px to 35px]]>
     </Changes>
     <ExtensionList>
-        <Extension Id="com.wk.ai_scriptmix.panel" Version="1.4.2"/>
-        <Extension Id="com.wk.ai_scriptmix.dialog" Version="1.4.2"/>
+        <Extension Id="ai_scriptmix" Version="0"/>
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
@@ -36,18 +35,24 @@
         </RequiredRuntimeList>
     </ExecutionEnvironment>
     <DispatchInfoList>
-        <Extension Id="com.wk.ai_scriptmix.panel">
+        <Extension Id="ai_scriptmix">
             <DispatchInfo>
                 <Resources>
                     <MainPath>./index.html</MainPath>
                     <ScriptPath>./jsx/hostscript.jsx</ScriptPath>
+                    <CEFCommandLine>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--allow-file-access</Parameter>
+                        <Parameter>--allow-file-access-from-files</Parameter>
+                    </CEFCommandLine>
                 </Resources>
                 <Lifecycle>
                     <AutoVisible>true</AutoVisible>
                 </Lifecycle>
                 <UI>
                     <Type>Panel</Type>
-                    <Menu>ai scriptmix 1.4.2</Menu>
+                    <Menu>ai scriptmix 1.4.3</Menu>
                     <Geometry>
                         <Size>
                             <Height>210</Height>
@@ -69,36 +74,6 @@
                         <Icon Type="DarkNormal">./icons/iconDarkNormal.png</Icon>
                         <Icon Type="DarkRollOver">./icons/iconDarkRollover.png</Icon>
                     </Icons>
-                </UI>
-            </DispatchInfo>
-        </Extension>
-        <Extension Id="com.wk.ai_scriptmix.dialog">
-            <DispatchInfo>
-                <Resources>
-                    <MainPath>./dialog.html</MainPath>
-                    <CEFCommandLine>
-                    </CEFCommandLine>
-                </Resources>
-                <Lifecycle>
-                    <AutoVisible>false</AutoVisible>
-                </Lifecycle>
-                <UI>
-                    <Type>ModalDialog</Type>
-                    <Menu>ai_scriptmix_dialog</Menu>
-                    <Geometry>
-                        <Size>
-                            <Height>1</Height>
-                            <Width>1</Width>
-                        </Size>
-                        <MinSize>
-                            <Height>1</Height>
-                            <Width>1</Width>
-                        </MinSize>
-                        <MaxSize>
-                            <Height>1</Height>
-                            <Width>1</Width>
-                        </MaxSize>
-                    </Geometry>
                 </UI>
             </DispatchInfo>
         </Extension>

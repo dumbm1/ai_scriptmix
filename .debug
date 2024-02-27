@@ -1,14 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?>
 <ExtensionList>
-    <Extension Id="com.wk.ai_scriptmix">
+    <Extension Id="ai_scriptmix">
         <HostList>
-
-            <!-- Comment Host tags according to the apps you want your panel to support -->
-
-            <!-- Illustrator -->
-            <Host Name="ILST" Port="8088"/>
-
+            <Host Name="ILST" Port="6666"/>
         </HostList>
     </Extension>
 </ExtensionList>
+<!--chrome:-->
+<!--http://localhost:6666-->
  

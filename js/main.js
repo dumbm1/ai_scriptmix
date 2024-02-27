@@ -30,8 +30,8 @@
         btnsNames         = [],
         divBtns           = document.getElementById('btns'),
         i,
-        BTN_DEFAULT_WIDTH = 30,
-        BTN_MIN_WIDTH     = 10,
+        BTN_DEFAULT_WIDTH = 15,
+        BTN_MIN_WIDTH     = 1,
         BTN_MAX_WIDTH     = 60;
 
     // load the buttons names from file
