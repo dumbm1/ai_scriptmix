@@ -26,6 +26,8 @@
     <ExecutionEnvironment>
         <HostList>
             <Host Name="ILST" Version="17.0"/>
+            <Host Name="PHXS" Version="15.0"/>
+            <Host Name="PHSP" Version="15.0"/>
         </HostList>
         <LocaleList>
             <Locale Code="All"/>
