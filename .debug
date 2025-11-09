@@ -2,10 +2,10 @@
 <ExtensionList>
     <Extension Id="ai_scriptmix">
         <HostList>
-            <Host Name="ILST" Port="6666"/>
+            <Host Name="ILST" Port="5678"/>
         </HostList>
     </Extension>
 </ExtensionList>
 <!--chrome:-->
-<!--http://localhost:6666-->
+<!--http://localhost:5678-->
  
