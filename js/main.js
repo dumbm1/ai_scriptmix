@@ -36,17 +36,8 @@
 
     // load the buttons names from file
     loadButtons();
+    document.querySelector('html').onselectstart = () => false;
 
-    jQuery.fn.extend({
-                       disableSelection: function () {
-                         this.each(function () {
-                           this.onselectstart = function () {
-                             return false;
-                           };
-                         });
-                       }
-                     });
-    $("body").disableSelection();
 
     /**
      * SERVICE BUTTONS HANDLERS
@@ -65,9 +56,6 @@
                                if (result.length == 0) return;
                                reloadPanel();
                              });
-    });
-    $('#btn_killCEP').click(function () {
-      csInterface.evalScript('killCEP()');
     });
     $('#btn_reload').click(function () {
       reloadPanel();

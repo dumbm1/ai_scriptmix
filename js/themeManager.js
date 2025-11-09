@@ -67,7 +67,6 @@ var themeManager = (function () {
     var bgdColor = toHex(panelBgColor);
 
     var btnAdd       = document.getElementById('btn_addBtn'),
-        btnKillCep   = document.getElementById('btn_killCEP'),
         btnReload    = document.getElementById('btn_reload'),
         btnSort      = document.getElementById('btn_prefs'),
         btnSource    = document.getElementById('btn_source'),
@@ -76,7 +75,6 @@ var themeManager = (function () {
         btnDefaults  = document.getElementById('btn_defaults');
 
     btnAdd.setAttribute('src', 'img/w_addBtn-01.png');
-    btnKillCep.setAttribute('src', 'img/w_killCEP-01.png');
     btnReload.setAttribute('src', 'img/w_reload-01.png');
     btnSort.setAttribute('src', 'img/w_prefs-01.png');
     btnSource.setAttribute('src', 'img/w_jsx_source-01.png');
@@ -91,7 +89,6 @@ var themeManager = (function () {
     if (panelBgColor.red > 122) {
       fontColor = '000000';
       btnAdd.setAttribute('src', 'img/addBtn-01.png');
-      btnKillCep.setAttribute('src', 'img/killCEP-01.png');
       btnReload.setAttribute('src', 'img/reload-01.png');
       btnSort.setAttribute('src', 'img/prefs-01.png');
       btnSource.setAttribute('src', 'img/jsx_source-01.png');
