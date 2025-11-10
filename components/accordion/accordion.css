@@ -1,0 +1,39 @@
+.accordion {
+}
+
+.accordion__details {
+}
+
+.accordion__summary {
+}
+
+.accordion__content {
+}
+
+/*.accordion:active, .accordion__summary:active, accordion__details:active,*/
+.accordion:focus, .accordion__summary:focus, accordion__details:focus {
+ outline: none;
+}
+
+.accordion__summary:hover{
+ background: var(--button-hover);
+ cursor: pointer;
+}
+
+/** Hide default arrow, replace it with custom errow
+summary {
+ display: block;
+}
+
+summary::-webkit-details-marker {
+ display: none;
+}
+
+summary::before {
+ content: "\25B6";
+ padding-right: 0.5em;
+}
+
+details[open] > summary::before {
+ content: "\25BC";
+}*/

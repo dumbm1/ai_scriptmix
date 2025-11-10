@@ -1,0 +1,11 @@
+@import "normalize.css";
+@import "fonts.css";
+@import "varColors.css";
+@import "../../components/output/output.css";
+
+
+body {
+ /*font-family: "Source Sans Pro", sans-serif;*/
+ font-family: "Tahoma", Sans-Serif;
+ overflow: hidden; /* for correct work fitPanelToContent() */
+}

@@ -1,0 +1,39 @@
+.output { /*details*/
+ width: 100%;
+ position: relative;
+}
+
+.output__title { /*summary*/
+ padding-top: .3rem;
+ padding-bottom: .5rem;
+ outline: none;
+ display: inline-block;
+ cursor: pointer;
+ position: relative;
+}
+
+.output__field {
+ resize: none;
+ width: 100%;
+ border: none;
+ outline: none;
+ overflow: auto;
+}
+
+.output__icon_clear {
+ /*transform: translate(.7rem, .3rem);*/
+ position: absolute;
+ top: .2rem;
+ left: 5rem;
+ outline: none;
+ transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+ opacity: .6;
+}
+
+.output__icon_clear:active {
+ transform: translate(0, -.2rem);
+}
+
+.output__icon_clear:hover {
+ opacity: 1;
+}

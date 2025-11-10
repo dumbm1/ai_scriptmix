@@ -1,0 +1,24 @@
+.page {
+ color: var(--color-primary);
+ background-color: var(--bg-primary);
+ padding: .5rem;
+ position: relative;
+ display: grid;
+ gap: 1rem;
+}
+
+.page__section {
+ box-sizing: border-box;
+ padding: 0 .3rem;
+ position: relative;
+}
+
+.page__line-sep {
+ position: absolute;
+ width: calc(100vw - .8rem);
+ left: 50%;
+ transform: translate(-50%, .3rem);
+ height: 2px;
+ box-sizing: border-box;
+ border-bottom: 2px solid var(--border-secondary);
+}
