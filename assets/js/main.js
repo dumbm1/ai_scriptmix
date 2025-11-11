@@ -66,7 +66,7 @@
    let btns = document.querySelectorAll('.btn');
    let btnWidth = btns[0].style.width;
    btnWidth = parseFloat(btnWidth) + 1;
-   if (btnWidth > BTN_MAX_WIDTH) btnWidtn = BTN_MAX_WIDTH;
+   if (btnWidth > BTN_MAX_WIDTH) btnWidth = BTN_MAX_WIDTH;
 
    btns.forEach((btn, i) => {
     btn.style.width = btnWidth + 'px';
@@ -81,7 +81,7 @@
    let btns = document.querySelectorAll('.btn');
    let btnWidth = btns[0].style.width;
    btnWidth = parseFloat(btnWidth) - 1;
-   if (btnWidth < BTN_MIN_WIDTH) btnWidtn = BTN_MIN_WIDTH;
+   if (btnWidth < BTN_MIN_WIDTH) btnWidth = BTN_MIN_WIDTH;
 
    btns.forEach((btn, i) => {
     btn.style.width = btnWidth + 'px';
@@ -140,7 +140,7 @@
      return false;
     };
 
-    btn = divBtns.appendChild(btn);
+   /* btn =*/ divBtns.appendChild(btn);
 
     document.querySelector('#' + 'btn_' + btnName).style.width = btnW + 'px';
     document.querySelector('#' + 'btn_' + btnName).style.height = btnW + 'px';
