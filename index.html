@@ -1,45 +1,53 @@
 <!doctype html>
-<html>
+<html lang="ru">
 <head>
  <meta charset="utf-8">
-
- <link rel="stylesheet" href="assets/css/topcoat-desktop-dark.min.css"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="assets/css/main.css"/>
- <link id="hostStyle" rel="stylesheet" href="assets/css/styles.css"/>
-
  <title>scriptmix</title>
 </head>
 
-<body class="hostElt">
+<body>
 
-<div id="content">
+<div class="page">
 
- <div id="btns">
+ <div id="btns" style="padding-top:1rem">
   <!--the user buttons will be inserted into this div-->
 
  </div>
- <div id="btns_serv">
-  <input class="btn_serv" id="btn_defaults" type="image" title="Reset to Defaults" src="img/defaults-01.png"/>
-  <input class="btn_serv" id="btn_reload" type="image" title="Reload panel" src="img/reload-01.png"/>
-  <input class="btn_serv" id="btn_addBtn" type="image" title="Add script" src="img/addBtn-01.png"/>
-  <input class="btn_serv" id="btn_source" type="image" title="Go to script folder" src="img/jsx_source-01.png"/>
-  <input class="btn_serv" id="btn_prefs" type="image" title="Add script" src="img/prefs-01.png"/>
-  <input class="btn_serv" id="btn_scale_up" type="image" title="Icons scale up" src="img/scale-up-01.png"/>
-  <input class="btn_serv" id="btn_scale_down" type="image" title="Icons scale down" src="img/scale-down-01.png"/>
+
+ <div class="footer">
+
+  <svg class="button button_icon-service" id="btn_defaults" title="Reset to Defaults">
+   <use href="assets/img/icon-sprite.svg#home"></use>
+  </svg>
+  <svg input class="button button_icon-service" id="btn_reload"  title="Reload panel" >
+   <use href="assets/img/icon-sprite.svg#reload"></use>
+  </svg>
+  <svg class="button button_icon-service" id="btn_addBtn"  title="Add script">
+   <use href="assets/img/icon-sprite.svg#add-script"></use>
+  </svg>
+  <svg class="button button_icon-service" id="btn_source"  title="Go to script folder">
+   <use href="assets/img/icon-sprite.svg#open-store-folder"></use>
+  </svg>
+  <svg class="button button_icon-service" id="btn_prefs"  title="Add script">
+   <use href="assets/img/icon-sprite.svg#sort-buttons"></use>
+  </svg>
+  <svg class="button button_icon-service" id="btn_scale_up"  title="Icons scale up">
+   <use href="assets/img/icon-sprite.svg#size-plus"></use>
+  </svg>
+  <svg class="button button_icon-service" id="btn_scale_down"  title="Icons scale down">
+   <use href="assets/img/icon-sprite.svg#size-minus"></use>
+  </svg>
  </div>
 
 </div>
 
-
-
 <script src="assets/js/libs/CSInterface.js"></script>
-
+<script src="assets/js/newSCInterface.js"></script>
 <script src="assets/js/themeChanger.js"></script>
-
-<script src="assets/js/libs/jquery-2.0.2.min.js"></script>
-
-<script src="assets/js/themeManager.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/reloadPanel.js"></script>
+<script defer src="assets/js/main.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="add_jsx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2a241e;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="34 14 22 14 22 2 14 2 14 14 2 14 2 22 14 22 14 34 22 34 22 22 34 22 34 14"/>
+</svg>

@@ -1,11 +1,18 @@
 @import "normalize.css";
 @import "fonts.css";
 @import "varColors.css";
-@import "../../components/output/output.css";
+@import "../../components/page/page.css";
+@import "../../components/footer/footer.css";
+@import "../../components/button/button.css";
 
 
+
+html {
+ height: 100%;
+}
 body {
  /*font-family: "Source Sans Pro", sans-serif;*/
  font-family: "Tahoma", Sans-Serif;
  overflow: hidden; /* for correct work fitPanelToContent() */
+ height: 100%;
 }

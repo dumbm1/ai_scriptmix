@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="size-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 2.83px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #010101;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 5.67px;
+      }
+
+      .cls-3 {
+        stroke-width: 4.25px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="19.72" cy="10.95" r="8.78"/>
+  <line class="cls-3" x1="27.87" y1="34.79" x2="27.87" y2="21.13"/>
+  <line class="cls-3" x1="34.7" y1="27.96" x2="21.04" y2="27.96"/>
+  <line class="cls-2" x1="3.06" y1="26.92" x2="12.01" y2="18.72"/>
+</svg>

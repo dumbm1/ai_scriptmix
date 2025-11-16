@@ -1,0 +1,3 @@
+function reloadPanel() {
+ location.reload();
+}
