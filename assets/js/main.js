@@ -71,7 +71,7 @@
    btns.forEach((btn, i) => {
     btn.style.width = btnWidth + 'px';
     btn.style.height = btnWidth + 'px';
-   })
+   });
 
    csInterface.evalScript('writeIni(' + JSON.stringify(btnWidth) + ')');
   });
@@ -86,7 +86,7 @@
    btns.forEach((btn, i) => {
     btn.style.width = btnWidth + 'px';
     btn.style.height = btnWidth + 'px';
-   })
+   });
 
    csInterface.evalScript('writeIni(' + JSON.stringify(btnWidth) + ')');
   });
@@ -140,7 +140,8 @@
      return false;
     };
 
-   /* btn =*/ divBtns.appendChild(btn);
+    /* btn =*/
+    divBtns.appendChild(btn);
 
     document.querySelector('#' + 'btn_' + btnName).style.width = btnW + 'px';
     document.querySelector('#' + 'btn_' + btnName).style.height = btnW + 'px';
@@ -165,8 +166,13 @@
      var btnW = +res;
      if (btnW > BTN_MAX_WIDTH) btnW = BTN_MAX_WIDTH;
      if (btnW < BTN_MIN_WIDTH) btnW = BTN_MIN_WIDTH;
-     $('.btn').width(btnW);
-     $('.btn').height(btnW);
+
+     var btns = document.querySelectorAll('.btn');
+     btns.forEach(btn => {
+      btn.style.width = btnW + 'px';
+      btn.style.height = btnW + 'px';
+     });
+
     });
 
    });
