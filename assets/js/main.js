@@ -142,11 +142,10 @@ function addBtnToInterface(btnName) {
    return false;
   };
 
-  /* btn =*/
   divBtns.appendChild(btn);
 
-  document.querySelector('#' + 'btn_' + btnName).style.width = btnW + 'px';
-  document.querySelector('#' + 'btn_' + btnName).style.height = btnW + 'px';
+  document.getElementById('btn_' + btnName).style.width = btnW + 'px';
+  document.getElementById('btn_' + btnName).style.height = btnW + 'px';
 
  });
 }
